@@ -4,15 +4,15 @@ root: .
 venue: CSC - IT Center for Science
 address: Espoo, Finland 
 country: Finland
-humandate: Mar 18-19, 2015
+humandate: Mar 16-17, 2015
 humantime: 9:00 am - 5:00 pm 
 startdate: 2015-03-18
 enddate: 2015-03-19
 latlnang: 60.178127,24.832749
 registration: open
-instructor: ["Aleksandra Pawlik", "TBC"]
-helper: ["TBC"]
-#eventbrite: 
+instructor: ["François Michonneau","Aleksandra Pawlik"]
+helper: [""]
+#eventbrite: 15497330934
 contact: data-carpentry@software-carpentry.org
 ---
 <!--
@@ -24,227 +24,63 @@ contact: data-carpentry@software-carpentry.org
     This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
 -->
 
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
 
-    Maybe you need to change height value:
-
-    - for one room use 206px,
-    - for one waitlist room use 152px,
-    - for two room use 254px,
-    - for one waitlist room and one room use 253px,
-    - for two waitlist room use 197px.
--->
 {% if page.eventbrite %}
 <iframe
-  src="//www.eventbrite.com/tickets-external?eid={{13905871837}}&ref=etckt" frameborder="0" width="100%" height="206px" scrolling="auto"></iframe>
+  src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" height="206px" scrolling="auto"></iframe>
 {% endif %}
 
 
-<h2>Workshop Information</h2>
-<p>This Data Carpentry workshop is aimed at 
-researchers in the life sciences at all career stages. Data Carpentry is designed to teach basic concepts, skills
- and tools for working more effectively with data.</p>
-
+<h2>Hackathon Information</h2>
 <p>
-The workshop will cover the following topics:
-<ul>
-<li>How to use spreadsheet programs (such as Excel) more effectively, and the limitations of such programs.</li>
-<li>Getting data out of spreadsheets and into more powerful tools (R).</li>
-<li>Using databases, including managing and querying data in SQL.</li>
-<li>Workflows and automating repetitive tasks, in particular using the command line shell.</li>
-</ul>
-</p>
+  This event aims to develop training materials in life sciences to be used in
+  <a href="http://datacarpentry.org">Data Carpentry</a> workshops and
+  other training that is using a similar teaching model. Data Carpentry workshops are aimed at 
+researchers in the life sciences at all career stages. The workshops are designed to teach basic concepts, skills
+  and tools for working more effectively with data. Data Carpentry workshops are an example-driven two-day workshops
+  during which short tutorials alternate with hands-on practical exercises, and participants are encouraged
+  both to help one another, and to try applying what they have learned to their own research problems during
+  and between sessions. See the  <a href="http://datacarpentry.org/">Data Carpentry website</a> for more info. <br/></p>
 
+
+<h2>Participantion</h2>
+<p>This hackathon is primarily aimed at the ELIXIR project members. We invite all domain experts who are interested in and may already provide
+  training in data handling; and who are willing to share their materials with a wider community. Participants with experience in running Data and
+  Software Carpentry workshops are particularily encouraged to join. The <a href="#guidelines"> contribution guidelines</a> provide more information
+  on the work planned for the hackathon. <br/>
+  The local ELIXIR Node Data and Software Coordinators will be contacting the potential participants directly but if you are interested in joining
+the event please contact <a href="mailto:aleksandra.pawlik@manchester.ac.uk">Aleksandra Pawlik.</p>
+
+
+
+ <a name="guidelines"><h2>Contribution guidelines</h2></a>
 <p>
-We especially encourage to register those who may be less familiar with the above topics. There is no prerequisite as to what computing skills and knowledge is required. The participants are only asked to bring their own laptops configured as described below. <br/><br/>
-</p>
+  There are many ways in which the participants can contribute to the development of new and the improvement of existing
+  training materials for life sciences in Data Carpentry. In order to help the participants prepare for the event and
+  structure the work during the hackathon here are some contribution guidelines and ideas:
+  <ul>
+    <li> Check the <a href="https://github.com/datacarpentry/datacarpentry/issues">existing list of issues</a>
+    and select the ones you are keen to work on.</li>
+    <li> Look at the <a href="https://github.com/datacarpentry/datacarpentry">existing Data Carpentry materials</a> and
+      if you identify anything else that needs improvements, <a href="https://github.com/datacarpentry/datacarpentry/issues/new">file in a new issue</a>
+	to work on during the hackathon.</li>
+    <li> If you have your own datasets which you already use for teaching and you would be keen to share these, we will provide deatiled
+      guidelines how to do that. Good datasets which are rich enough for teaching but not overwhelmingly large and freely available are
+      difficult to get.
+    </li>
+    <li> You may also chose to develop training materials for a particular tool for data manipulation following the Data Carpentry model. We will
+    provide a lesson template to help you structure the material. </li>
+  </ul>
 
-<h2>Acknowledgements &amp; Support</h2>
-<div class="pull-right" style="max-width: 320px; padding-left: 6px;">
-</div>
-<p>
-Data Carpentry is a partnership of several NSF-funded <a href="http://www.nsf.gov/dir/index.jsp?org=BIO" target="_blank">BIO</a> Centers (<a href="http://nescent.org" target="_blank">NESCent</a>, <a href="http://iplantcollaborative.org" target="_blank">iPlant</a>, <a href="http://idigbio.org" target="_blank">iDigBio</a>, <a href="http://beacon-center.org/" target="_blank">BEACON</a> and <a href="http://sesync.org" target="_blank">SESYNC</a>) and <a href="http://software-carpentry.org" target="_blank">Software Carpentry</a>, and is sponsored by the <a href="http://dataone.org" target="_blank">Data Observation Network for Earth</a> (DataONE). The structure and objectives of the curriculum as well as the teaching style are informed by <a href="http://software-carpentry.org" target="_blank">Software Carpentry</a>.</p>
-<!--<p> This workshop is supported by <a href="http://elixir-uk.org/">ELIXIR UK. </a> </p> -->
+</p>  
 
 
-
-<!--
-    Edit this block to show the syllabus and schedule for your workshop.
--->
+<h2>How to contribute</h2>
+  <p> </p>
 
 
-<h2>Preliminary schedule (TBC)</h2>
-
-<table class="table table-striped">
-  <tr> <td>Thursday</td><td>09:00 - 9:30</td>  <td>Introduction</td> </tr>
-  <tr> <td></td>        <td>09:30 - 10:30</td> <td>Better use of spreadsheets - part 1</td> </tr>
-  <tr> <td></td>        <td>10:30 - 11:00</td> <td>Break</td> </tr>
-  <tr> <td></td>        <td>11:00 - 12:00</td> <td>Better use of spreadsheets - part 2</td> </tr>
-  <tr> <td></td>        <td>12:00 - 13:00</td>  <td>Lunch break</td> </tr>
-  <tr> <td></td>        <td>13:00 - 15:00</td> <td>Tools for manipulating life science 
-data (TBC)</td> </tr>
-  <tr> <td></td>        <td>15:00 - 15:30</td>  <td>Coffee break</td> </tr>
-  <tr> <td></td>        <td>15:30 - 16:45</td>  <td>Introduction to working with data in SQL</td> </tr>
-  <tr> <td></td>       <td>16:45 - 17:00</td>  <td>Wrap-up</td> </tr>
   
-  <!-- empty line -->    
-  <tr> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td></tr>
- 
-  <tr> <td>Friday</td> <td>09:00 - 11:00 </td>  <td>Introduction to shell</td> </tr>
-  <tr> <td></td>        <td>11:00 - 11:30 </td> <td>Break</td> </tr>
-  <tr> <td></td>        <td>11:30 - 13:00</td>  <td>Introduction to R</td> </tr>
-  <tr> <td></td>        <td>13:00 - 14:00 </td> <td>Lunch</td> </tr>
-  <tr> <td></td>        <td>14:00 - 15:00 </td> <td>Data manipulation using R - part 1</td> </tr>
-  <tr> <td></td>        <td>15:00 - 15:30 </td>  <td>Break</td> </tr>
-   <tr> <td></td>       <td>15:30 - 16:30</td>  <td>Data manipulation using R - part 2</td> </tr>
-   <tr> <td></td>       <td>16:30 - 17:00</td>  <td>Wrap-up and feedback</td> </tr>
-</table>
-
-
-<hr/>
-
-<!--
-    Edit the setup instructions in _includes/setup.html to reflect your bootcamp.
-    (In particular, most bootcamps teach either Python or R, not both.)
--->
-<div>
-
-<h2> Syllabus</h2>
-
-
-        <h3>Better use of spreadsheets</h3>
-        <ul>
-            <li>Formatting data tables in spreadsheets.</li>
-            <li>Common formatting mistakes by spreadsheet users.</li>
-            <li>Dates as data.</li>
-            <li>Basic quality control and data manipulation in spreadsheets.</li>
-            <li>Exporting data from spreadsheets.</li>
-            <li>Caveats of popular data and file formats.</li>
-        </ul>
- <!--
-   <h4>Lessons</h4>
-        <ul>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/00-intro.html">Introduction</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/01-format-data.html">Lesson 1: Formatting data</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/02-common-mistakes.html">Lesson 2: Common formatting mistakes</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/03-dates-as-data.html">Lesson 3: Dates as data</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/04-quality-control.html">Lesson 4: Basic quality control</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/05-exporting-data.html">Lesson 5: Exporting data</a></li>
-            <li><a href="{{page.root}}/lessons/spreadsheet/ecology-examples/06-data-formats-caveats.html">Lesson 6: Caveats of popular data and file formats</a></li>
-        </ul>
-
-
-
-
-
-        <h3>Managing experimental metadata in tables</h3>
-        <ul>
-            <li>>Managing life science experimental metadata in tables.</li>
-            <li>Discovery of Metadata Standards and Databases. </li>
-            <li> Tools shed</li>
-            
-        </ul>
-
-   <h4>Lessons</h4>
-        <ul>
-            <li><a href="{{page.root}}/lessons/isa-tools/01-experimental-metadata.html">Managing life science experimental metadata in tables</a></li>
-             <li><a href="{{page.root}}/lessons/isa-tools/metadata-standard-discovery.html">Discovery of Metadata Standards and Databases</a></li>
-             <li><a href="{{page.root}}/lessons/isa-tools/tools-shed.html">Tools shed</a></li>
-
-        </ul>
-
--->
-
-
-        <h3>The Unix Shell</h3>
-        <ul>
-            <li>Files and directories: <code>pwd</code>, <code>cd</code>, <code>ls</code>, <code>mkdir</code>, ...</li>
-            <li>History and tab completion</li>
-            <li>Pipes and redirection</li>
-            <li>Looping over files</li>
-            <li>Creating and running shell scripts</li>
-            <li>Finding things: <code>grep</code>, <code>find</code>, ...</li>
-        </ul>
-
-<!--
-   <h4>Lessons</h4>
-        <ul>
-            <li><a href="{{page.root}}/lessons/shell/00-intro.html">Lesson 1: Introduction</a></li>
-            <li><a href="{{page.root}}/lessons/shell/01-filedir.html">Lesson 2: Files and Directories</a></li>
-            <li><a href="{{page.root}}/lessons/shell/02-create.html">Lesson 3: Creating things</a></li>
-            <li><a href="{{page.root}}/lessons/shell/03-pipefilter.html">Lesson 4: Pipes and Filters</a></li>
-            <li><a href="{{page.root}}/lessons/shell/04-loop.html">Lesson 5: Loops</a></li>
-            <li><a href="{{page.root}}/lessons/shell/05-script.html">Lesson 6: Shell scripts</a></li>
-            <li><a href="{{page.root}}/lessons/shell/06-find.html">Lesson 7: Finding things</a></li>
-        </ul>
--->
-
-    <h3>Introduction and data manipulation with R</h3>
-        <ul>
-            <li>Introduction to R</li>
-            <li>Reading and writing .csv</li>
-            <li>Creating Functions</li>
-            <li>Looping over files</li>
-            <li>Analyzing Multiple Data Sets</li>
-            <li>Making Choices - conditionals</li>
-        </ul>
-
-<!--
- <h4>Lessons</h4>
-        <ul>
-            <li><a href="{{page.root}}/lessons/R/00-first-timers.html">Lesson 1: Introduction</a></li>
-        </ul>
-
--->
-
-
-
-
-</div>
-
-<!--
-<h2>Additional Resources</h2>
-
-<h3>shell</h3>
-<ul>
-<li><a href=http://fosswire.com/post/2007/08/unixlinux-command-cheat-sheet/>Unix/Linux Command Reference</a>
-<li><a href=https://github.com/swcarpentry/boot-camps/blob/master/shell/shell_cheatsheet.md
->Shell cheat sheet</a>
-<li><a href=http://software-carpentry.org/v4/shell/index.html>Software Carpentry shell lessons</a>
-</ul>
-
-<h3>R</h3>
-
-<b>Where to learn more about R</b>
-<ul>
-<li><a href=http://www.statmethods.net/>http://www.statmethods.net/</a> - good for data organization, basics stats and graphs
-<li><a href=http://www.gardenersown.co.uk/Education/Lectures/R/anova.htm>http://www.gardenersown.co.uk/Education/Lectures/R/anova.htm</a> - basic parametric and non-parametric stats
-<li><a href=http://www.cyclismo.org/tutorial/R/index.html>http://www.cyclismo.org/tutorial/R/index.html</a> - R tutorial
-<li><a href=http://www.amazon.com/R-Action-Robert-Kabacoff/dp/1935182390>R in Action</a> - good book as an R reference
-<li><a href=http://www.twotorials.com/>http://www.twotorials.com/</a>
-<li><a href=http://www.r-bloggers.com/>http://www.r-bloggers.com/</a>
-<li><a href=http://tryr.codeschool.com/>http://tryr.codeschool.com/</a>
-<li><a href=http://adv-r.had.co.nz/>Advanced R Programming by Hadley Wickham</a>
-<li><a href=http://www.computerworld.com/s/article/9239625/Beginner_s_guide_to_R_Introduction>Beginner's Guide to R from Computer World</a>
-<li><a href=http://www.scoop.it/t/r-for-journalists>R for Journalists</a>
-<li><a href=http://www.r-bloggers.com/>R Bloggers</a>
-<li><a href=http://www.inside-r.org/>inside-R</a> 
-<li><a href=http://ropensci.org/>rOpenSci</a>
-</ul>
-
-<p>
-<b>Plotting in R</b>
-<ul>
-<li><a href=http://www.harding.edu/fmccown/r/>http://www.harding.edu/fmccown/r/</a> - Very simple graphs
-<li><a href=https://storify.com/tracykteal/r-galleries>A variety of R gallery recommendations</a>
-<li><a href=http://docs.ggplot2.org/>ggplot gallery</a> - extensive and comprehensive; a great resource
-<li><a href=http://www.amazon.com/R-Graphics-Cookbook-Winston-Chang-ebook/dp/B00AJ5X7W4/>R Graphics Cookbook</a> - highly recommended
-<li><a href=http://www.cookbook-r.com/Graphs/>Some of R Graphics Cookbook plots</a> - a set of some of the plots from the R Graphics Cookbook by Winston Chang
-<li><a href=http://rgm3.lab.nig.ac.jp/RGM/R_image_list?page=665&init=true>R Graphical Manual</a> - plots from apparently every R CRAN package
-</ul>
--->
-
+  <!--
 <div>
 <a id="setup">
 <h2>Setup</h2> </a>
@@ -260,5 +96,46 @@ data (TBC)</td> </tr>
 {% include setup.html %}
 
 </div>
+-->
+
+
+<h2>Acknowledgements &amp; Support</h2>
+<div class="pull-right" style="max-width: 320px; padding-left: 6px;">
+</div>
+<p>This workshop is supported by the <a href="http://elixir-europe.org/">ELIXIR project. </a> </p> -->
+
+
+
+
+<h2>Schedule</h2>
+
+<table class="table table-striped">
+  <tr> <td>Monday</td><td>09:00 - 9:30</td>  <td>Welcome and introductions</td> </tr>
+  <tr> <td></td>        <td>09:30 - 10:00</td> <td>Introduction to the Data Carpentry teaching model</td> </tr>
+  <tr> <td></td>        <td>10:30 - 11:00</td> <td>Material development pitches</td> </tr>
+  <tr> <td></td>        <td>11:00 - 12:00</td> <td>Selecting projects and setting up. Hacking starts!</td> </tr>
+  <tr> <td></td>        <td>12:00 - 13:00</td>  <td>Lunch break</td> </tr>
+  <tr> <td></td>        <td>13:00 - 15:00</td> <td>Working on the materials development</td> </tr>
+  <tr> <td></td>        <td>15:00 - 15:30</td>  <td>Coffee break</td> </tr>
+  <tr> <td></td>        <td>15:30 - 16:45</td>  <td>Working on the materials development</td> </tr>
+  <tr> <td></td>       <td>16:45 - 17:00</td>  <td>Wrap-up</td> </tr>
+  
+  <!-- empty line -->    
+  <tr> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td></tr>
+ 
+  <tr> <td>Tuesday</td> <td>09:00 - 09:30 </td>  <td>Reporting back from Day 1</td> </tr>
+  <tr> <td></td>        <td>09:30 - 12:00 </td> <td>Working on the materials development</td> </tr>
+  <tr> <td></td>        <td>12:00 - 13:00</td>  <td>Lunch break</td> </tr>
+  <tr> <td></td>        <td>13:00 - 15:00 </td> <td>Working on materials development</td> </tr>
+  <tr> <td></td>        <td>15:00 - 15:30 </td> <td>Coffee break</td> </tr>
+  <tr> <td></td>        <td>15:30 - 16:30 </td> <td>Working on materials development</td> </tr>
+   <tr> <td></td>       <td>16:30 - 17:00</td>  <td>Reporting back and wrap-up</td> </tr>
+
+</table>
+
+
+<hr/>
+
+
 
 
