@@ -1,10 +1,13 @@
-Data Carpentry workshop 18-19 March 2015
+Data & Software Carpentry hackathon 16-17 March 2015
 ==================
-![Data Carpentry logo](https://raw.githubusercontent.com/datacarpentry/logos/master/DC1_logo_small.png "Data Carpentry logo")  
+![Data Carpentry logo](https://raw.githubusercontent.com/datacarpentry/logos/master/DC1_logo_small.png "Data Carpentry logo")
+
+![Software Carpentry logo](https://raw.githubusercontent.com/datacarpentry/logos/master/DC1_logo_small.png "Data Carpentry logo")
+
 
 Where: **CSC - IT Center for Science, Espoo, Finland**    
-When: **18-19 March 2015**  
-[Further details](http://apawlik.github.io/2015-03-18-csc-espoo)
+When: **16-17 March 2015**  
+[Further details](http://data-lessons.github.io/2015-03-16-elixir-sprint/)
 
 
 
