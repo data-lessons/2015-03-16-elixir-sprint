@@ -1,9 +1,6 @@
-Data & Software Carpentry hackathon 16-17 March 2015
+Data Carpentry hackathon 16-17 March 2015
 ==================
 ![Data Carpentry logo](https://raw.githubusercontent.com/datacarpentry/logos/master/DC1_logo_small.png "Data Carpentry logo")
-
-![Software Carpentry logo](https://raw.githubusercontent.com/datacarpentry/logos/master/DC1_logo_small.png "Data Carpentry logo")
-
 
 Where: **CSC - IT Center for Science, Espoo, Finland**    
 When: **16-17 March 2015**  
