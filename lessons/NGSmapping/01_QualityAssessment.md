@@ -62,6 +62,14 @@ FASTQC can be used to obtain different informations on the Fastq files: read num
 
 Here the software will provide the different informations on the *all_seq_1.fastq* file and will report those informations in the *1_fastqc* folder (that will be created) in an HTML file.
 
+> ## Exercise {.callout}
+> What is the type of encoding for the quality ?
+> Which are the overrepresented sequences and their origin ?
+> How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
+
+
+
+
 
 
 
