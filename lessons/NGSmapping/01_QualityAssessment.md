@@ -46,9 +46,9 @@ Individual reads are represented on four lines:
 
 The Quality is encoded in ASCII format, as followed (from https://en.wikipedia.org/wiki/FASTQ_format#Encoding)
 
-![FASTQ Quality Encoding](../../img/NGSmapping_fastqEncoding.png  "FASTQ Quality Encoding")
+![FASTQ Quality Encoding](/home/ftarkin/Dropbox/Data-lessons/img/NGSmapping_fastqEncoding.png  "FASTQ Quality Encoding")
 
-The Quality value (from 0 to 40 generally) represents the probability that the given base is not an erroneous one. The exact formula is Q~sanger~ = -10 log~10~ *p*
+The Quality value (from 0 to 40 generally) represents the probability that the given base is not an erroneous one. The exact formula is Q<sub>sanger</sub> = -10 log<sub>10>/sub> *p*
 
 #Quality control using FASTQC
 
