@@ -48,7 +48,7 @@ The Quality is encoded in ASCII format, as followed (from https://en.wikipedia.o
 
 ![FASTQ Quality Encoding](/home/ftarkin/Dropbox/Data-lessons/img/NGSmapping_fastqEncoding.png  "FASTQ Quality Encoding")
 
-The Quality value (from 0 to 40 generally) represents the probability that the given base is not an erroneous one. The exact formula is** Q<sub>sanger</sub> = -10 log<sub>10</sub> *p***
+The Quality value (from 0 to 40 generally) represents the probability that the given base is not an erroneous one. The exact formula is ** Q<sub>sanger</sub> = -10 log<sub>10</sub> *p* **
 
 #Quality control using FASTQC
 
