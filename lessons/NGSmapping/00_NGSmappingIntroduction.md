@@ -13,10 +13,9 @@ minutes: 10
 # NGS Mapping
 
 Typically, NGS data treatments are structured in 3 main steps:
-
-> 1.Quality Assessment
-> 2. Mapping upon a Reference
-> 3. FInal analyses
+ 1.Quality Assessment
+2. Mapping upon a Reference
+3. FInal analyses
 
 The two first steps are standard operations, whereas the last one is specific to scientific questions.
 
