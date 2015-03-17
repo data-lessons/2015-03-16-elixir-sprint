@@ -63,7 +63,34 @@ cutadapt $(<cutadapt.conf) all_seq_1_sanger.fastq > all_seq_1_sanger_trimmed.fas
 > ## Challenges {.challenge}
 >
 > 1. Repeat the CutAdapt step using the second file
-> 2. You can check the modification of sequence data using FASTQC as in the previous [lesson 01_QualityAssessement][lessonO1NGS]
+> 2. You can check the modification of sequence data using FASTQC as in the previous [lesson 01_QualityAssessement][lesson01NGS]
+> 3. **OPTIONAL CHALLENGE**: you can split your original read sequence file in 10 files and try to run 10 Cutadapt instance on parallel, in order to speed the process. Use the *split* utility from Shell for that step. After all the instances are finished, concatenate back the output files in a single one and compare the sequence number to the file you obtained previously (*wc -l*, *diff*,...)
+
+#Re-pairing the sequence data
+
+##Why Re-pairing ?
+During the cleaning step, some mates of paired sequences were lost (low quality sequences, too short trimmed sequences...). However, the mapping tools for pair-ended data request that the two mates then are present.
+
+## How to re-pair data ?
+
+We will use a small utility (written in Perl) called *pairing.pl* that will compare two sequence files and will output three files:
+
+> 1. Forward re-paired file
+> 2. Reverse re-paired file
+> 3. Single remaining sequence file
+
+Run the script using the following command
+
+~~~{.bash}
+~$ perl pairing.pl -f all_seq_1_sanger_trimmed.fastq -r all_seq_2_sanger_trimmed.fastq
+~~~
+
+> ##Challenges {.challenge}
+>
+> 1. Compare the number of sequences between the forward and reverse re-paired sequence files
+> 2. How many sequences are present in the single file ?
+
+
 
 [cutadaptLink]: https://code.google.com/p/cutadapt/
-[lessonO1NGS]: 01_QualityAssessment.md
+[lesson01NGS]: 01_QualityAssessment.md
