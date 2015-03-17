@@ -49,7 +49,7 @@ You must have also a suitable Java JRE 1.7xx or more.
 
 [SAMtools][samLink] is a suite of small program able to work with SAM and BAM files (mapping files): converting SAM to BAM, extraction of a part of SAM/BAM, SNP extraction through pileup...
 
-#Origin of the data used in this set of lesson
+#Origin of the data used in these lessons
 
 The data are Illumina reads from a complete RNAseq experiment on different accessions of *Oryza glaberrima*, the cultivated African rice. This plant is an annual autogamous plant, with a selfing level higher than 98.5%.
 
