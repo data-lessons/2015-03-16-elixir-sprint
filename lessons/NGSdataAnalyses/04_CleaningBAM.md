@@ -9,11 +9,11 @@ minutes: 10
 > * Understand that the already obtained BAM contains biases
 > * To be able to clean a BAM file for SNP calling
 
-# Removing the *not properly mapped* in pair reads
+# Removing the *not properly mapped in pair* reads
 The mapping step has provide a SAM/BAM file which contains all the reads provided, whatever they are mapped or not, and properly mapped according to reference and options or not.
 Here we will remove all read pairs that are not properly mapped **in pair**, meaning that:
 > * the two mates of the given pair respect the mapping constraints,
-> * that their relative orientation and distance of their outermost bases is correct.
+> * their relative orientation and distance of their outermost bases is correct.
 
 For that we will re-use the *SAMtools view* utility but with different options.
 
@@ -27,7 +27,7 @@ For that we will re-use the *SAMtools view* utility but with different options.
 
 # Removing duplicated reads
 
-Reads (or pairs) are considered as duplicates if their coordinates are exactly the same once mapped on the reference sequence. Such events arise because from different origins, that will not be discussed more here (see ####REF### for more informations).
+Reads (or pairs) are considered as duplicates if their coordinates are exactly the same once mapped on the reference sequence. Such events arise because from different origins, that will not be discussed more here (see [this disucssion of SeqAnswers][seqanswerDiscussion] for more informations).
 
 We will use the *SAMtools rmdup* utility for that
 
@@ -38,3 +38,4 @@ We will use the *SAMtools rmdup* utility for that
 The file is now ready to be used for SNP calling.
 
 [samSpecLink]: http://samtools.github.io/hts-specs/SAMv1.pdf
+[seqanswerDiscussion]: http://seqanswers.com/forums/showpost.php?p=25274&postcount=2
