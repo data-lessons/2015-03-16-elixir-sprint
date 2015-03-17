@@ -15,7 +15,7 @@ Raw sequence data are still contaminated by various bias: presence of remaining 
 
 #How to clean ?
 
-A lot of tools are freely available for cleaning NGS data (FastX-toolkit, *Trimmomatic*, NGS QC toolkit, etc...). Here, we will use CutAdapt, a tool originally aimed to remove adaptor sequences but that also can trim the low-quality bases.
+A lot of tools are freely available for cleaning NGS data (FastX-toolkit, *Trimmomatic*, NGS QC toolkit, etc...). Here, we will use CutAdapt, a tool originally aimed at removing adaptor sequences but that also can trim the low-quality bases.
 
 ##The way CutAdapt works
 
@@ -57,7 +57,7 @@ Now, the **cutadapt.conf** file is ready.
 Now the configuration file is ready, CutAdapt can be launched on the sequence file, using the following command for the first one:
 
 ~~~{.bash}
-cutadapt $(<2_Cutadapt/cutadapt.conf) 0_fastq/all_seq_1_sanger.fastq > 2_Cutadapt/all_seq_1_sanger_trimmed.fastq
+~$ cutadapt $(<2_Cutadapt/cutadapt.conf) 0_fastq/all_seq_1_sanger.fastq > 2_Cutadapt/all_seq_1_sanger_trimmed.fastq
 ~~~
 
 > ## Challenges {.challenge}
