@@ -11,7 +11,7 @@ minutes: 20
 
 # What is a mapping for NGS data ?
 
-Mapping is the process used to align the NGS reads upon a reference sequence. It aimed to identify the different possible positions (if not unique) of any given NGS sequence on the reference. The mapping tools are numerous (*bwa*, *SOAP*, *bowtie*, *MAQ*, and many others) but all of them will provide a SAM file as output (Sequence/Alignment Map).
+Mapping is the process used to align the NGS reads upon a reference sequence. It is aimed to identify the different possible positions (if not unique) of any given NGS sequence on the reference. The mapping tools are numerous (*bwa*, *SOAP*, *bowtie*, *MAQ*, and many others) but all of them will provide a SAM file as output (Sequence/Alignment Map).
 
 So, to run a mapping you need at least a reference sequence and a NGS sequence file. Here, we will use pair-ended data to perform the mapping.
 
