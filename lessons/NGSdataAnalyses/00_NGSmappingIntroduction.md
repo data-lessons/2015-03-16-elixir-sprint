@@ -16,11 +16,11 @@ Typically, NGS data treatments are structured in 3 main steps:
 
 1. Quality Assessment
 2. Mapping upon a Reference
-3. FInal analyses
+3. Final analyses
 
 The two first steps are standard operations, whereas the last one is specific to scientific questions.
 
-The goal of this practical is to learn how to (*i*) perform basic Quality assessment using FASTQC and CutAdapt, then (*ii*) to be able to perform a mapping using bwa upon a reference sequence, and (*iii*) then just extracting the SNP using SAMtools as an example of third step.
+The goal of this practical is to learn how to (*i*) perform basic Quality assessment using *FASTQC* and *CutAdapt*, then (*ii*) to be able to perform a mapping using *bwa* upon a reference sequence, and (*iii*) then just extracting the SNP using *SAMtools* as an example of third step.
 
 #Before we get started
 You need to have access to the following tools:
@@ -31,13 +31,13 @@ You need to have access to the following tools:
 >> For Mac (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.2.dmg)
 > * CutAdapt (https://github.com/marcelm/cutadapt/archive/master.zip)
 > * bwa (http://sourceforge.net/projects/bio-bwa/files/latest/download?source=files)
-> * Re-pairing tool (http://***/pairing.pl)
+> * Re-pairing tool (https://github.com/data-lessons/2015-03-16-elixir-sprint/blob/gh-pages/data/biology/NGSdata/pairing.pl)
 > * EMBOSS packages (ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-6.6.0.tar.gz)
 > * SAMtools (http://sourceforge.net/projects/samtools/files/latest/download?source=files)
 
 You must have also a suitable Java JRE 1.7xx or more.
 
-[FASTQC] [fastqcLink] is a quality control tool for high throughput sequence data, working in either a graphical way or in command line. It will provide a HTML output giving informations about quality encoding, data quality, overrepresented sequences and so on.
+[FASTQC] [fastqcLink] is a quality control tool for high throughput sequence data, working in either a graphical way or in command line. It will provide a HTML output giving information about quality encoding, data quality, overrepresented sequences and so on.
 
 [CutAdapt][cutadaptLink] is a tool aimed at removing adaptors sequences and at quality-based trimming of reads.
 
@@ -49,10 +49,11 @@ You must have also a suitable Java JRE 1.7xx or more.
 
 [SAMtools][samLink] is a suite of small program able to work with SAM and BAM files (mapping files): converting SAM to BAM, extraction of a part of SAM/BAM, SNP extraction through pileup...
 
+#Origin of the data used in these lessons
 
-#More resources
-> * Links to articles
-> * Websites
+The data are Illumina reads from a complete RNAseq experiment on different accessions of *Oryza glaberrima*, the cultivated African rice. This plant is an annual autogamous plant, with a selfing level higher than 98.5%.
+
+We selected only a subset representative of the data for educational aims.
 
 [fastqcLink]: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 [cutadaptLink]: https://code.google.com/p/cutadapt/
