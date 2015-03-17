@@ -86,4 +86,4 @@ We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to
 > 1. Perform the same changes on the *all_seq_2.fastq* file
 > 2. Repeat the FASTQC experiment and confirm the PHRED+33 encoding type
 
-[dataLink]:http://***/data.zip
+[dataLink]:../../data/biology/data.zip
