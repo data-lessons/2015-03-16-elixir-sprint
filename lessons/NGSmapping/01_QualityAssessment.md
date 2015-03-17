@@ -68,35 +68,4 @@ Here the software will provide the different informations on the *all_seq_1.fast
 > How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
 
 
-
-
-
-
-
-~~~ {.python}
-some code:
-    to be displayed
-~~~
-~~~ {.output}
-output
-from
-program
-~~~
-~~~ {.error}
-error reports from program (if any)
-~~~
-
-and possibly including:
-
-> ## Callout Box {.callout}
->
-> An aside of some kind.
-
-> ## Challenge Title {.challenge}
->
-> Description of a single challenge.
-> There may be several challenges
-> that make reference to [Challenge Title](01-one.html#challenge-title).
-
-
 [dataLink]:http://***/data.zip
