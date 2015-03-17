@@ -63,9 +63,10 @@ FASTQC can be used to obtain different informations on the Fastq files: read num
 Here the software will provide the different informations on the *all_seq_1.fastq* file and will report those informations in the *1_fastqc* folder (that will be created) in an HTML file.
 
 > ## Challenge {.challenge}
-> What is the type of encoding for the quality ?
-> Which are the overrepresented sequences and their origin ?
-> How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
+>
+> 1. What is the type of encoding for the quality ?
+> 2. Which are the overrepresented sequences and their origin ?
+> 3. How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
 
 # Changing the Quality encoding type
 
@@ -74,7 +75,7 @@ As you can observe in the FASTQ files and in the FASTQC report, the files are en
 We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to PHRED+33.
 
 ~~~{.bash}
-seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
+~$ seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
 ~~~
 
 > ## Challenges {.challenge}
