@@ -17,6 +17,6 @@ The lessons were originally developed by [Ch. Tranchand and B. Granouillac from 
 
 
 
-[irdLink]:  http://bioinfo.mpl.ird.fr/index.php/trainings/trainings-montpellier-2013]
+[irdLink]:  http://bioinfo.mpl.ird.fr/index.php/trainings/trainings-montpellier-2013
 [andreaEmail]: mailto:andrea.manconi@itb.cnr.it
 [francoisEmail]: mailto:francois.sabot@ird.fr
