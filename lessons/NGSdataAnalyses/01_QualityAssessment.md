@@ -16,7 +16,7 @@ Download the [dataset][dataLink] and uncompress it using
 ~~~{.bash}
 ~$ unzip data.zip
 ~~~
-The original FASTQ data are in the *Data* folder (*all_seq_1.fastq* and *all_seq_2.fastq*).
+The original FASTQ data are in the *data* folder (*all_seq_1.fastq* and *all_seq_2.fastq*).
 
 #Understanding FASTQ Format
 
@@ -39,10 +39,11 @@ NTCAATTCTTGTGTAGATTGGGAAATTTCAGTTGGACTGCATCAATGGGGATCCCCTAGTTGGCCTCAGCAAGTGA
 It will automatically display in the terminal the 10 first lines of the *all_seq_1.fastq* file. Using *tail* will display the last 10 lines instead.
 
 Individual reads are represented on four lines:
-> 1- Name of the read preceeded by a "@"
-> 2- Sequence of the read
-> 3- A line with '+', that can be followed by the name of the read again
-> 4- The Quality score of each base encoded in ASCII format
+>
+> 1. Name of the read preceeded by a "@"
+> 2. Sequence of the read
+> 3. A line with '+', that can be followed by the name of the read again
+> 4. The Quality score of each base encoded in ASCII format
 
 The Quality is encoded in ASCII format, as followed (from https://en.wikipedia.org/wiki/FASTQ_format#Encoding)
 
@@ -67,10 +68,11 @@ Here the software will provide the different informations on the *all_seq_1.fast
 > 1. What is the type of encoding for the quality ?
 > 2. Which are the overrepresented sequences and their origin ?
 > 3. How many sequences are present in the *all_seq_2.fastq* file ? You can also use the following bash command to obtain this information.
-> 4. Perform the same analysis on the *data/all_seq_2.fastq* file
 ~~~{.bash}
 ~$ for i in `wc -l data/all_seq_1.fastq |cut -f1 -d" "` ;do echo $(($i/4));done
 ~~~
+> 4. Perform the same analysis on the *data/all_seq_2.fastq* file
+
 
 # Changing the Quality encoding type
 
