@@ -16,13 +16,13 @@ Download the [dataset][dataLink] and uncompress it using
 ~~~{.bash}
 ~$ unzip data.zip
 ~~~
-The original FASTQ data are in the *Data* folder (*all_seq_1.fastq *and *all_seq_2.fastq*).
+The original FASTQ data are in the *Data* folder (*all_seq_1.fastq* and *all_seq_2.fastq*).
 
 #Understanding FASTQ Format
 
 Take a look to the FASTQ files content using the *head* or *tail* command utilities
 
-~~~{.bash}
+~~~{.raw}
 ~$ head data/all_seq_1.fastq
 @RC10_HWUSI-EAS454_0006:1:99:16639:1487#TAGCTT/1
 TTCTTGTGTAGATTGGGAAATTTCAGTTGGACTGCATCAATGGGGATCCCCTAGTTGGCCTCAGCAAGTGTGGAAG
@@ -79,7 +79,7 @@ seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
 
 > ## Challenges {.challenge}
 >
-> 1. Perform the same changes on the all_seq_2.fastq file
+> 1. Perform the same changes on the *all_seq_2.fastq* file
 > 2. Repeat the FASTQC experiment and confirm the PHRED+33 encoding type
 
 [dataLink]:http://***/data.zip
