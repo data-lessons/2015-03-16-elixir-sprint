@@ -7,7 +7,7 @@ minutes: 30
 > ## Learning Objectives {.objectives}
 >
 > * Understanding the cleaning methods and goals
-> * Learning to use CutAdapt
+> * Learning to use *CutAdapt*
 
 #Why Cleaning ?
 
@@ -15,15 +15,15 @@ Raw sequence data are still contaminated by various bias: presence of remaining 
 
 #How to clean ?
 
-A lot of tools are freely available for cleaning NGS data (FastX-toolkit, *Trimmomatic*, NGS QC toolkit, etc...). Here, we will use CutAdapt, a tool originally aimed at removing adaptor sequences but that also can trim the low-quality bases.
+A lot of tools are freely available for cleaning NGS data (*FastX-toolkit*, *Trimmomatic*, *NGS QC toolkit*, etc...). Here, we will use *CutAdapt*, a tool originally aimed at removing adaptor sequences but that also can trim the low-quality bases.
 
 ##The way CutAdapt works
 
-[CutAdapt][cutadaptLink] will first perform a scan of the sequence in order to identify homologous sequences to the list of adaptors provided by the user. The sequence of the adaptors will be removed then. CutAdapt will also trim the scanned sequence in order to retain ONLY bases with a Quality score higher than a given threshold.
+[*CutAdapt*][cutadaptLink] will first perform a scan of the sequence in order to identify homologous sequences to the list of adaptors provided by the user. The sequence of the adaptors will be removed then. *CutAdapt* will also trim the scanned sequence in order to retain ONLY bases with a Quality score higher than a given threshold.
 
-## Use of CutAdapt
+## Use of *CutAdapt*
 
-Here we will use the Solexa_mRNA_primers.txt file to generate the list of adaptors to provide to CutAdapt.
+Here we will use the *Solexa_mRNA_primers.txt* file to generate the list of adaptors to provide to *CutAdapt*.
 
 1. First, create the "2_Cutadapt" folder using the *mkdir* command
 ~~~{.bash}
@@ -52,9 +52,9 @@ Now, the **cutadapt.conf** file is ready.
 > * -q: Quality score threshold
 > * -e: Error rate for the adaptor sequence
 
-## Running CutAdapt
+## Running *CutAdapt*
 
-Now the configuration file is ready, CutAdapt can be launched on the sequence file, using the following command for the first one:
+Now the configuration file is ready, *CutAdapt* can be launched on the sequence file, using the following command for the first one:
 
 ~~~{.bash}
 ~$ cutadapt $(<2_Cutadapt/cutadapt.conf) 0_fastq/all_seq_1_sanger.fastq > 2_Cutadapt/all_seq_1_sanger_trimmed.fastq
@@ -62,9 +62,9 @@ Now the configuration file is ready, CutAdapt can be launched on the sequence fi
 
 > ## Challenges {.challenge}
 >
-> 1. Repeat the CutAdapt step using the second file
-> 2. You can check the modification of sequence data using FASTQC as in the previous [lesson 01_QualityAssessement][lesson01NGS]
-> 3. **OPTIONAL CHALLENGE**: you can split your original read sequence file in 10 files and try to run 10 Cutadapt instance on parallel, in order to speed the process. Use the *split* utility from Shell for that step. After all the instances are finished, concatenate back the output files in a single one and compare the sequence number to the file you obtained previously (*wc -l*, *diff*,...).
+> 1. Repeat the *CutAdapt* step using the second file
+> 2. You can check the modification of sequence data using *FASTQC* as in the previous [lesson 01_QualityAssessement][lesson01NGS]
+> 3. **OPTIONAL CHALLENGE**: you can split your original read sequence file in 10 files and try to run 10 *CutAdapt* instance on parallel, in order to speed the process. Use the *split* utility from Shell for that step. After all the instances are finished, concatenate back the output files in a single one and compare the sequence number to the file you obtained previously (*wc -l*, *diff*,...).
 
 #Re-pairing the sequence data
 
@@ -73,7 +73,7 @@ During the cleaning step, some mates of paired sequences were lost (low quality 
 
 ## How to re-pair data ?
 
-We will use a small utility (written in Perl) called *pairing.pl* that will compare two sequence files and will output three files:
+We will use a small utility (written in *Perl*) called *pairing.pl* that will compare two sequence files and will output three files:
 
 > 1. Forward re-paired file
 > 2. Reverse re-paired file
