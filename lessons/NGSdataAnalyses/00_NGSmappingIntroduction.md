@@ -16,7 +16,7 @@ Typically, NGS data treatments are structured in 3 main steps:
 
 1. Quality Assessment
 2. Mapping upon a Reference
-3. FInal analyses
+3. Final analyses
 
 The two first steps are standard operations, whereas the last one is specific to scientific questions.
 
@@ -48,6 +48,12 @@ You must have also a suitable Java JRE 1.7xx or more.
 [EMBOSS][embossLink] is a suite of basic tools for sequence manipulations.
 
 [SAMtools][samLink] is a suite of small program able to work with SAM and BAM files (mapping files): converting SAM to BAM, extraction of a part of SAM/BAM, SNP extraction through pileup...
+
+#Origin of the data used in this set of lesson
+
+The data are Illumina reads from a complete RNAseq experiment on different accessions of *Oryza glaberrima*, the cultivated African rice. This plant is an annual autogamous plant, with a selfing level higher than 98.5%.
+
+We selected only a subset representative of the data for educational aims.
 
 [fastqcLink]: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 [cutadaptLink]: https://code.google.com/p/cutadapt/
