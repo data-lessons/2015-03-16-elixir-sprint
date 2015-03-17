@@ -1,6 +1,6 @@
 ---
 layout: page
-title: NGS Data Analysis 
+title: NGS Data Analysis
 subtitle: Main presentation
 minutes: 10
 ---
@@ -39,7 +39,7 @@ You must have also a suitable Java JRE 1.7xx or more.
 
 [FASTQC] [fastqcLink] is a quality control tool for high throughput sequence data, working in either a graphical way or in command line. It will provide a HTML output giving informations about quality encoding, data quality, overrepresented sequences and so on.
 
-[CutAdapt][cutadaptLink] is a tool aimed at removing adaptors sequences and at quality-based trimming of reads. 
+[CutAdapt][cutadaptLink] is a tool aimed at removing adaptors sequences and at quality-based trimming of reads.
 
 [bwa][bwaLink] is a tool for mapping short as long reads upon a reference sequence using a Burrows-Wheeler Transform method.
 
@@ -58,5 +58,5 @@ You must have also a suitable Java JRE 1.7xx or more.
 [cutadaptLink]: https://code.google.com/p/cutadapt/
 [bwaLink]: http://bio-bwa.sourceforge.net/
 [embossLink]: http://emboss.sourceforge.net/
-[pairingLink]: http://***/pairing.pl
+[pairingLink]: ../../data/biology/NGSdata/pairing.pl
 [samLink]: http://www.htslib.org/

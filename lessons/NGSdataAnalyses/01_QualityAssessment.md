@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Quality Assessment
-subtitle: Checking and cleaning data
+subtitle: Checking quality sequence data
 minutes: 30
 ---
 > ## Learning Objectives {.objectives}
 >
 > * Understanding a FASTQ file structure
 > * Controlling the Quality and encoding of a FASTQ file
-> * Removing adapters and low-quality reads and bases
+> * Switching to one Quality encoding type to another one
 
 #Picking up Data
 
@@ -16,13 +16,13 @@ Download the [dataset][dataLink] and uncompress it using
 ~~~{.bash}
 ~$ unzip data.zip
 ~~~
-The original FASTQ data are in the *Data* folder (*all_seq_1.fastq *and *all_seq_2.fastq*).
+The original FASTQ data are in the *Data* folder (*all_seq_1.fastq* and *all_seq_2.fastq*).
 
 #Understanding FASTQ Format
 
 Take a look to the FASTQ files content using the *head* or *tail* command utilities
 
-~~~{.bash}
+~~~{.raw}
 ~$ head data/all_seq_1.fastq
 @RC10_HWUSI-EAS454_0006:1:99:16639:1487#TAGCTT/1
 TTCTTGTGTAGATTGGGAAATTTCAGTTGGACTGCATCAATGGGGATCCCCTAGTTGGCCTCAGCAAGTGTGGAAG
@@ -62,10 +62,28 @@ FASTQC can be used to obtain different informations on the Fastq files: read num
 
 Here the software will provide the different informations on the *all_seq_1.fastq* file and will report those informations in the *1_fastqc* folder (that will be created) in an HTML file.
 
-> ## Exercise {.callout}
-> What is the type of encoding for the quality ?
-> Which are the overrepresented sequences and their origin ?
-> How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
+> ## Challenge {.challenge}
+>
+> 1. What is the type of encoding for the quality ?
+> 2. Which are the overrepresented sequences and their origin ?
+> 3. How many sequences are present in the *all_seq_2.fastq* file ? You can also use the following bash command to obtain this information.
+~~~{.bash}
+~$ for i in `wc -l data/all_seq_1.fastq |cut -f1 -d" "` ;do echo $(($i/4));done
+~~~
 
+# Changing the Quality encoding type
 
-[dataLink]:http://***/data.zip
+As you can observe in the FASTQ files and in the FASTQC report, the files are encoded in PHRED+64. We need to change the encoding type before launching the cleaning step.
+
+We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to PHRED+33.
+
+~~~{.bash}
+~$ seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
+~~~
+
+> ## Challenges {.challenge}
+>
+> 1. Perform the same changes on the *all_seq_2.fastq* file
+> 2. Repeat the FASTQC experiment and confirm the PHRED+33 encoding type
+
+[dataLink]:../../data/biology/NGSdata/data.zip
