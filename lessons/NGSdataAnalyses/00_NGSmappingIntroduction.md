@@ -58,5 +58,5 @@ You must have also a suitable Java JRE 1.7xx or more.
 [cutadaptLink]: https://code.google.com/p/cutadapt/
 [bwaLink]: http://bio-bwa.sourceforge.net/
 [embossLink]: http://emboss.sourceforge.net/
-[pairingLink]: ../../data/biology/pairing.pl
+[pairingLink]: ../../data/biology/NGSdata/pairing.pl
 [samLink]: http://www.htslib.org/
