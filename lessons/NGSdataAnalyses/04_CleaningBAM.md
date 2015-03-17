@@ -2,7 +2,7 @@
 layout: page
 title: CleaningBAM
 subtitle: Obtaining a BAM ready for SNP calling
-minutes: 20
+minutes: 10
 ---
 > ## Learning Objectives {.objectives}
 >
