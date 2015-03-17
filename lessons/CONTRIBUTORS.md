@@ -1,6 +1,4 @@
-Materials have been developed and adapted by different contributors  and other sources.
-
-The workshop was run at CSC, Espoo, Finland on March 16-17, 2015 with the development and instruction of lessons by Aleksandra Pawlik and Francois Michonneau.
+Materials have been developed and adapted by different contributors during the workshop run at CSC, Espoo, Finland on March 16-17, 2015, with the development and instruction of lessons by Aleksandra Pawlik and Francois Michonneau.
 
 #DATA
 
