@@ -66,4 +66,4 @@ cutadapt $(<cutadapt.conf) all_seq_1_sanger.fastq > all_seq_1_sanger_trimmed.fas
 > 2. You can check the modification of sequence data using FASTQC as in the previous [lesson 01_QualityAssessement][lessonO1NGS]
 
 [cutadaptLink]: https://code.google.com/p/cutadapt/
-[lessonO1NGS]: O1_QualityAssessment.md
+[lessonO1NGS]: 01_QualityAssessment.md
