@@ -66,7 +66,10 @@ Here the software will provide the different informations on the *all_seq_1.fast
 >
 > 1. What is the type of encoding for the quality ?
 > 2. Which are the overrepresented sequences and their origin ?
-> 3. How many sequences are present in the *all_seq_2.fastq* file ? You can also use the *for i in \`wc -l data/all_seq_1.fastq |cut -f1 -d" "\` ;do echo $(($i/4));done* bash command to obtain this information.
+> 3. How many sequences are present in the *all_seq_2.fastq* file ? You can also use the following bash command to obtain this information.
+~~~{.bash}
+for i in `wc -l data/all_seq_1.fastq |cut -f1 -d" "` ;do echo $(($i/4));done
+~~~
 
 # Changing the Quality encoding type
 
