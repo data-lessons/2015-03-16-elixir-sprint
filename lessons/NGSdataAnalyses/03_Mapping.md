@@ -17,7 +17,7 @@ So, to run a mapping you need at least a reference sequence and a NGS sequence f
 
 # Running a mapping using *bwa aln*
 
-*bwa* software will take into account mismatches as well as indel (insertions and deletions) for mapping, as well as the intrisec quality of the reads.
+*bwa* software will take into account mismatches and indels (insertions and deletions) for mapping, as well as the quality of the reads.
 
 First, the reference has to be indexed to be used in the mapping process. Run the following command to index it:
 
