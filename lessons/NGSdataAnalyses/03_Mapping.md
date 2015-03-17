@@ -35,11 +35,11 @@ The independent mapping can be performed using the following commands:
 ~~~
 > ## About the aln options {.callout}
 >
-> Here we did not change the mapping conditions for the aln part. However, there are many parameters that can be changed to optimize the mapping or to take into account the genetic distance between the reference and the individual that has been sequenced for instance.
-> * Edit distance (-n): the number of mismatches that are tolerated between the read and the reference
-> * Gap opening (-o): the number of gaps allowed between the read and the reference
-> * Number of occurences of best hits (-R): maximum number of alignments reported for a single read.
-> * Read Quality threshold for mapping (-q): lower quality reads will be trimmed to 35 bases
+> Here we did not change the mapping conditions for the *aln* part. However, there are many parameters that can be changed to optimize the mapping or to take into account the genetic distance between the reference and the individual that has been sequenced for instance. The most common are:
+> * **Edit distance** (-n): the number of mismatches that are tolerated between the read and the reference
+> * **Gap opening** (-o): the number of gaps allowed between the read and the reference
+> * **Number of occurences of best hits** (-R): maximum number of alignments reported for a single read.
+> * **Read Quality threshold for mapping** (-q): lower quality reads will be trimmed to 35 bases
 
 > ##Challenge {.challenge}
 >
@@ -53,12 +53,34 @@ Once the independent mapping for the forward and reverse files are obtained, we 
 
 > ## About the sampe options {.callout}
 >
-> Here again we did not change the mapping conditions for the sampe part. However, there are also many parameters that can be changed.
-> * Insert size (-a): the size of the library, i.e. the distance between the outermost bases between the two mates of a pair. It depends of the sequencing process itself.
-> * Maximum hits to output for paired reads (-n): only *n* positions/alignments will be reported in the final SAM file, if multiple positions exist for the considered pair.
-> * Maximum hits to output for discordant pairs (-N): only *N* positions/alignments per mate will be reported in the final SAM file, for discordant mapping only (too large insert size, each mate on a different chromosome, abnormal position such as FF or RF or RR).
+> Here again we did not change the mapping conditions for the sampe part. However, there are also many parameters that can be changed. The most common are:
+> * **Insert size** (-a): the size of the library, i.e. the distance between the outermost bases between the two mates of a pair. It depends of the sequencing process itself.
+> * **Maximum hits to output for paired reads** (-n): only *n* positions/alignments will be reported in the final SAM file, if multiple positions exist for the considered pair.
+> * **Maximum hits to output for discordant pairs** (-N): only *N* positions/alignments per mate will be reported in the final SAM file, for discordant mapping only (too large insert size, each mate on a different chromosome, abnormal position such as FF or RF or RR).
 
 The resulting file *3_bwa/all_seq.sam* is in [SAM format][samSpecLink], a tabular text file in which the positions and variations for each reads compared to the reference are reported. Using *bwa sampe* there is only one line per read. Some tools may report more than a line per read if many positions for this read exist.
+
+# Converting SAM to BAM and re-ordering
+
+The SAM file is a human-readable text file, but can be really huge (up to hundreds of Gb). To save space and to access faster to its content, we will transform it in a BAM format (for Binary/Alignment Map), similar to a compressed file (we will save more than 50% of drive space).
+
+## Transforming a SAM in a BAM
+
+We will use the *SAMtools view* utility to perform this step, and creating a BAM file in the *4_SAMtools* directory:
+
+~~~{.bash}
+~$ mkdir 4_SAMtools
+~$ samtools view -bS -o 4_SAMtools/unsorted.bam 3_bwa/all_seq.sam
+~~~
+
+## Re-ordering the BAM file
+
+We will use the *SAMtools sort* utility for that:
+
+~~~{.bash}
+~$ samtools sort -f 4_SAMtools/sorted.bam 4_SAMtools/unsorted.bam
+~~~
+
 
 
 
