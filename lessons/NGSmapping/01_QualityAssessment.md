@@ -8,7 +8,7 @@ minutes: 30
 >
 > * Understanding a FASTQ file structure
 > * Controlling the Quality and encoding of a FASTQ file
-> * Removing adapters and low-quality reads and bases
+> * Switching to one Quality encoding type to another one
 
 #Picking up Data
 
@@ -69,6 +69,17 @@ Here the software will provide the different informations on the *all_seq_1.fast
 
 # Changing the Quality encoding type
 
+As you can observe in the FASTQ files and in the FASTQC report, the files are encoded in PHRED+64. We need to change the encoding type before launching the cleaning step.
 
+We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to PHRED+33.
+
+~~~{.bash}
+seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
+~~~
+
+> ## Challenges {.challenge}
+>
+> 1. Perform the same changes on the all_seq_2.fastq file
+> 2. Repeat the FASTQC experiment and confirm the PHRED+33 encoding type
 
 [dataLink]:http://***/data.zip
