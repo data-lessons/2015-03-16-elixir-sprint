@@ -48,37 +48,18 @@ The independent mapping can be performed using the following commands:
 Once the independent mapping for the forward and reverse files are obtained, we can launch the mapping of the pairs themselves and extract the SAM file:
 
 ~~~{.bash}
-bwa sampe -f 3_bwa/all_seq.sam data/reference.fas 3_bwa/forward.sai 3_bwa/reverse.sai 2_Cutadapt/forward.fastq 2_Cutadapt/reverse.fastq
+~$ bwa sampe -f 3_bwa/all_seq.sam data/reference.fas 3_bwa/forward.sai 3_bwa/reverse.sai 2_Cutadapt/forward.fastq 2_Cutadapt/reverse.fastq
 ~~~
 
-Paragraphs of text
---- possibly including [key word 1](reference.html#key-word-1) ---
-mixed with:
-
-~~~ {.python}
-some code:
-    to be displayed
-~~~
-~~~ {.output}
-output
-from
-program
-~~~
-~~~ {.error}
-error reports from program (if any)
-~~~
-
-and possibly including:
-
-> ## Callout Box {.callout}
+> ## About the sampe options {.callout}
 >
-> An aside of some kind.
+> Here again we did not change the mapping conditions for the sampe part. However, there are also many parameters that can be changed.
+> * Insert size (-a): the size of the library, i.e. the distance between the outermost bases between the two mates of a pair. It depends of the sequencing process itself.
+> * Maximum hits to output for paired reads (-n): only *n* positions/alignments will be reported in the final SAM file, if multiple positions exist for the considered pair.
+> * Maximum hits to output for discordant pairs (-N): only *N* positions/alignments per mate will be reported in the final SAM file, for discordant mapping only (too large insert size, each mate on a different chromosome, abnormal position such as FF or RF or RR).
 
-or an image from the `figs` directory:
+The resulting file *3_bwa/all_seq.sam* is in [SAM format][samSpecLink], a tabular text file in which the positions and variations for each reads compared to the reference are reported. Using *bwa sampe* there is only one line per read. Some tools may report more than a line per read if many positions for this read exist.
 
-![this is the image's title](fig/example.svg "this is the image's alt text")
 
-> ## Challenge Title {.challenge}
->
-> Description of a single challenge.
-> There may be several challenges.
+
+[samSpecLink]: http://samtools.github.io/hts-specs/SAMv1.pdf
