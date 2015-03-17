@@ -35,11 +35,11 @@ Here we will use the Solexa_mRNA_primers.txt file to generate the list of adapto
 ~~~
 3. Generate the **cutadapt.conf** configuration file using the *grep* and *sed* command utilities
 ~~~{.bash}
-~$ grep -v "Solexa*" | sed -e 's/\n/\n-b/g' > cutadapt.conf
+~$ grep -v "Solexa*" | sed -e 's/\n/\n-b/g' > 2_Cutadapt/cutadapt.conf
 ~~~
 4. Add specific options to your current experiment to the **cutadapt.conf** file
 ~~~{.bash}
-~$ echo -e "-O 7\n-m 20\n-q 20\n-e 0.1"
+~$ echo -e "-O 7\n-m 20\n-q 20\n-e 0.1" >> 2_Cutadapt/cutadapt.conf
 ~~~
 
 Now, the **cutadapt.conf** file is ready.
@@ -57,7 +57,7 @@ Now, the **cutadapt.conf** file is ready.
 Now the configuration file is ready, CutAdapt can be launched on the sequence file, using the following command for the first one:
 
 ~~~{.bash}
-cutadapt $(<cutadapt.conf) all_seq_1_sanger.fastq > all_seq_1_sanger_trimmed.fastq
+cutadapt $(<2_Cutadapt/cutadapt.conf) 0_fastq/all_seq_1_sanger.fastq > 2_Cutadapt/all_seq_1_sanger_trimmed.fastq
 ~~~
 
 > ## Challenges {.challenge}
@@ -82,7 +82,7 @@ We will use a small utility (written in Perl) called *pairing.pl* that will comp
 Run the script using the following command
 
 ~~~{.bash}
-~$ perl pairing.pl -f all_seq_1_sanger_trimmed.fastq -r all_seq_2_sanger_trimmed.fastq
+~$ perl pairing.pl -f 2_Cutadapt/all_seq_1_sanger_trimmed.fastq -r 2_Cutadapt/all_seq_2_sanger_trimmed.fastq
 ~~~
 
 > ##Challenges {.challenge}

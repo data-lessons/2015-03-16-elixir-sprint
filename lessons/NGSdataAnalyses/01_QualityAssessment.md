@@ -75,10 +75,11 @@ Here the software will provide the different informations on the *all_seq_1.fast
 
 As you can observe in the FASTQ files and in the FASTQC report, the files are encoded in PHRED+64. We need to change the encoding type before launching the cleaning step.
 
-We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to PHRED+33.
+We will use the *seqret* tool from the *EMBOSS* suite to switch from PHRED+64 to PHRED+33. First create a folder for correct data called "0_fastq", then launch the seqret command
 
 ~~~{.bash}
-~$ seqret fastq-illumina::all_seq_1.fastq fastq-sanger::all_seq_1_sanger.fastq
+~$ mkdir 0_fastq
+~$ seqret fastq-illumina::data/all_seq_1.fastq fastq-sanger::0_fastq/all_seq_1_sanger.fastq
 ~~~
 
 > ## Challenges {.challenge}

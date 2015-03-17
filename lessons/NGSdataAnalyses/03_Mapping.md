@@ -9,6 +9,48 @@ minutes: 20
 > * Understanding what is a mapping for NGS data
 > * To be able to launch a mapping for NGS data using *bwa*
 
+# What is a mapping for NGS data ?
+
+Mapping is the process used to align the NGS reads upon a reference sequence. It aimed to identify the different possible positions (if not unique) of any given NGS sequence on the reference. The mapping tools are numerous (*bwa*, *SOAP*, *bowtie*, *MAQ*, and many others) but all of them will provide a SAM file as output (Sequence/Alignment Map).
+
+So, to run a mapping you need at least a reference sequence and a NGS sequence file. Here, we will use pair-ended data to perform the mapping.
+
+# Running a mapping using *bwa aln*
+
+*bwa* software will take into account mismatches as well as indel (insertions and deletions) for mapping, as well as the intrisec quality of the reads.
+
+First, the reference has to be indexed to be used in the mapping process. Run the following command to index it:
+
+~~~{.bash}
+~$ bwa index data/reference.fas
+~~~
+
+The mapping operation itself will be split in two: independent mapping for forward and reverse files, then re-compiling the possible position for the pairs in a single SAM file.
+
+The independent mapping can be performed using the following commands:
+
+~~~{.bash}
+~$ mkdir 3_bwa
+~$ bwa aln -f 3_bwa/forward.sai data/reference.fas 2_Cutadapt/forward.fastq
+~~~
+> ## About the aln options {.callout}
+>
+> Here we did not change the mapping conditions for the aln part. However, there are many parameters that can be changed to optimize the mapping or to take into account the genetic distance between the reference and the individual that has been sequenced for instance.
+> * Edit distance (-n): the number of mismatches that are tolerated between the read and the reference
+> * Gap opening (-o): the number of gaps allowed between the read and the reference
+> * Number of occurences of best hits (-R): maximum number of alignments reported for a single read.
+> * Read Quality threshold for mapping (-q): lower quality reads will be trimmed to 35 bases
+
+> ##Challenge {.challenge}
+>
+> Perform the mapping for the reverse file in the same way.
+
+Once the independent mapping for the forward and reverse files are obtained, we can launch the mapping of the pairs themselves and extract the SAM file:
+
+~~~{.bash}
+bwa sampe -f 3_bwa/all_seq.sam data/reference.fas 3_bwa/forward.sai 3_bwa/reverse.sai 2_Cutadapt/forward.fastq 2_Cutadapt/reverse.fastq
+~~~
+
 Paragraphs of text
 --- possibly including [key word 1](reference.html#key-word-1) ---
 mixed with:
